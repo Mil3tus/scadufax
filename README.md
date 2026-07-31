@@ -100,7 +100,7 @@ python3 scadufax.py [options]
 ## Scan a single host
 
 ```bash
-python3 scadufax.py -t -d 192.168.0.10
+scadufax -d 192.168.0.1 -p 21,22
 ```
 
 ---
@@ -108,15 +108,15 @@ python3 scadufax.py -t -d 192.168.0.10
 ## Scan multiple ports
 
 ```bash
-python3 scadufax.py -t -d 192.168.0.10 -p 22,80,443
+python3 scadufax.py -R 192.168.0.1-192.168.0.254 -p 21,22,8
 ```
 
 ---
 
-## Scan an IP range
+## Scan an IP range (SYN Scan)
 
 ```bash
-python3 scadufax.py -t -R 192.168.0.1-192.168.0.254
+sudo python3 scadufax.py -sS -R 192.168.0.1-192.168.0.254 -p 21,22,80,443
 ```
 
 ---
@@ -125,22 +125,6 @@ python3 scadufax.py -t -R 192.168.0.1-192.168.0.254
 
 ```bash
 sudo python3 scadufax.py -icmp -R 192.168.0.1-192.168.0.254
-```
-
----
-
-## SYN Scan
-
-```bash
-sudo python3 scadufax.py -t -s S -d 192.168.0.10
-```
-
----
-
-## Save scan results
-
-```bash
-python3 scadufax.py -t -d 192.168.0.10 -o result.txt
 ```
 
 ---
