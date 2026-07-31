@@ -15,7 +15,7 @@ import os
 import time
 
 # imported modules
-sys.path.append('include/')
+sys.path.append('modules/')
 from network import *
 from iostream import *
 
