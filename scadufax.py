@@ -853,7 +853,7 @@ def main():
                     first_layer()
             else:
                 program_usage('select a valid scan method')
-        elif (args.flag_scanner == None and args.tcp_scanner == True and args.icmo_scanner == False):
+        elif (args.flag_scanner == None and args.tcp_scanner == True and args.icmp_scanner == False):
                 if (args.d == None and args.R == None):
                     # no target selected (single of multiples)
                     program_usage('no target selected')
